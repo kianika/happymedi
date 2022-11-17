@@ -1,20 +1,23 @@
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header/Header";
 import styled from "styled-components";
 import Footer from "../components/Footer/Footer";
+import Header from '../components/Header/Header';
 
-const PageContainer = styled.div`
-  min-height: 100vh;
-  position: relative;
-`;
+
+
 
 const SharedLayout = () => {
+
   return (
-    <PageContainer>
+    
+    <div>
       <Header />
       <Outlet />
       <Footer />
-    </PageContainer>
+    </div>
+    
   );
 };
+
 export default SharedLayout;
