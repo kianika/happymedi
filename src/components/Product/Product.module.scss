@@ -1,0 +1,61 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  @include flex-column;
+  flex: 1;
+  min-width: 380px;
+  height: 320px;
+  position: relative;
+  z-index: 3;
+  background-color: rgb(233, 235, 226);
+  border-radius: 10px;
+  padding: 20px 0;
+
+  h3 {
+    color: $secondary;
+  }
+
+  &__Number {
+    color: rgb(39, 38, 38);
+    font-size: medium;
+  }
+
+  &__Price {
+    padding: 3px 0;
+    color: rgb(15, 15, 15);
+    font-size: large;
+  }
+
+  &__Icons {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include flex;
+
+    &__IconsWrapper {
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      @include flex;
+      margin: 10px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+
+    &:hover &__IconsWrapper {
+      opacity: 1;
+    }
+  }
+  img {
+    height: 75%;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  width: 100%;
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 18px;
+}
