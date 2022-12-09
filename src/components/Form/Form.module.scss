@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+
+
+.Container{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: auto;
+  padding: 30px;
+  @include flex;
+  gap: 50px;
+  margin: 0 100px;
+  border-radius: 10px;
+
+  &__iconContainer{
+    @include flex;
+    gap: 4px;
+
+    &__icon{
+      color: $secondary;
+      font-size: 20px;
+      color: $primary;
+    } 
+  }
+
+ 
+
+  p{
+    color: $secondary;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid $secondary;
+  }
+  button{
+    padding: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: $secondary;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+  }
+}
