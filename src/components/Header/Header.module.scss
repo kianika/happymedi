@@ -43,6 +43,7 @@
           border-radius: 45px 0 0 45px;
           border: none;
           background-color: #edf4f6;
+          padding-left: 15px;
         }
 
         input {
@@ -62,10 +63,11 @@
       }
     }
 
-    &__Right {
+    &__right {
       flex: 1;
       cursor: pointer;
       @include flex;
+      justify-content: flex-end;
     }
   }
 
@@ -120,6 +122,10 @@
       justify-content: flex-end;
       gap: 2rem;
       font-size: 1.2rem;
+
+      &__icon{
+        cursor: pointer;
+      }
     }
   }
 }
