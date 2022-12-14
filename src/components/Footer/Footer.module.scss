@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  height: 200px;
+
+  &__firstRow {
+    display: flex;
+    justify-content: space-around;
+
+    &__first {
+      @include flex-column;
+
+      &__logo {
+        @include flex;
+
+        &__icon {
+          padding-right: 8;
+          color: $primary;
+          font-size: 25px;
+        }
+
+        h2 {
+          color: $secondary;
+        }
+      }
+
+      &__icons {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 0;
+        font-size: 1.5rem;
+        color: $primary;
+      }
+    }
+    
+    &__col {
+      @include flex;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          padding: 15px 0px;
+
+          h4 {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  hr{
+    margin: 10px 0;
+  }
+  &__secondRow {
+    @include flex;
+    padding-bottom: 10px;
+  }
+}

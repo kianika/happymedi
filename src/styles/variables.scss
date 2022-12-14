@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+
+$Poppins: 'Poppins', sans-serif;
+
+//Colors
+
+    
+    $primary: #15A9E3;
+    $secondary: #184363;
+    $light-blue: #EDF4F6;
+
+
+
+    // spacing
+$spacing-md: 16px;
+$spacing-lg: 100px;
+$spacing-xl: 150px;
+
+// border radius
+$borderRadius: 12px;
+
+// header height
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+@mixin flex-column {
+    flex-direction: column;
+    @include flex;
+}
+
+@mixin pointer{
+    cursor: pointer;
+
+}

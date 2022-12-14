@@ -1,0 +1,90 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  @include flex;
+  padding: 50px $spacing-lg;
+  width: 100%;
+  height: 50vh;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  background-color: #c6eaf8;
+  position: relative;
+
+  &__Wrapper {
+    height: 100%;
+    @include flex;
+
+    &__Slide {
+      display: none;
+    }
+
+    &__SlideActive {
+      @include flex;
+      width: 100vw;
+      height: 100%;
+
+      &__ImgContainer {
+        @include flex;
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        img {
+          height: 80%;
+          width: 50%;
+        }
+      }
+      &__InfoContainer {
+        flex: 1;
+        padding: 50px;
+        color: $secondary;
+
+        h1 {
+          font-size: 70px;
+        }
+        p {
+          margin: 50px 0px;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 3px;
+          color: $secondary;
+        }
+      
+        button {
+          padding: 10px;
+          font-size: 20px;
+          cursor: pointer;
+          color: $secondary;
+          background-color: orange;
+          border: 1px solid orange;
+          border-radius: 5px;
+          &:hover {
+            color: white;
+            background-color: $primary;
+            @include pointer;
+          }
+        }
+      }
+    }
+  }
+  &__Arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #fff7f7;
+    border-radius: 50%;
+    @include flex;
+    color: $secondary;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &__Right {
+      right: 60px;
+    }
+    &__Left {
+      left: 20px;
+    }
+  }
+}
