@@ -33,6 +33,7 @@
         color: $primary;
       }
     }
+    
     &__col {
       @include flex;
 
@@ -40,7 +41,7 @@
         list-style-type: none;
 
         li {
-          padding: 10px 0px;
+          padding: 15px 0px;
 
           h4 {
             color: $primary;
@@ -49,8 +50,11 @@
       }
     }
   }
-
+  hr{
+    margin: 10px 0;
+  }
   &__secondRow {
     @include flex;
+    padding-bottom: 10px;
   }
 }

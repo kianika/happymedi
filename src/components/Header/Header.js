@@ -6,6 +6,8 @@ import { AiOutlineUser } from "react-icons/ai";
 import styles from "./Header.module.scss";
 import { SlBasket } from "react-icons/sl";
 import { MdFavoriteBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
+import Contac from "../../pages/Contact/Contact"
 
 export default function Header() {
   return (
@@ -15,7 +17,7 @@ export default function Header() {
       </div>
       <div className={styles.container__Header}>
         <div className={styles.container__Header__left}>
-          <GiMedicines size={30} style={{ color: "#15A9E3" }} />
+          <GiMedicines size={35} style={{ color: "#15A9E3", paddingRight:"8px" }} />
           <h2>Happy Medi</h2>
         </div>
 
@@ -63,14 +65,14 @@ export default function Header() {
                 <a>Shop by Category</a>
               </li>
               <li>
-                <a>Contact Us</a>
+                <Link to="/Contact">Contact Us</Link>
               </li>
             </ul>
           </nav>
         </div>
         <div className={styles.container__Navbar__right}>
-          <MdFavoriteBorder />
-          <SlBasket />
+          <MdFavoriteBorder className={styles.container__Navbar__right__icon}/>
+          <SlBasket className={styles.container__Navbar__right__icon}/>
         </div>
       </div>
       <hr />
