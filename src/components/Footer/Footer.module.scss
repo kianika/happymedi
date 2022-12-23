@@ -4,12 +4,25 @@
   width: 100%;
   height: 200px;
 
+  @include tablet{
+    padding: 0 15px;
+  }
+
   &__firstRow {
     display: flex;
     justify-content: space-around;
 
+    @include tablet{
+      @include flex-column;
+      align-items: flex-start;
+    }
+
     &__first {
       @include flex-column;
+
+      @include tablet{
+        align-items: flex-start;
+      }
 
       &__logo {
         @include flex;
@@ -18,6 +31,7 @@
           padding-right: 8;
           color: $primary;
           font-size: 25px;
+
         }
 
         h2 {

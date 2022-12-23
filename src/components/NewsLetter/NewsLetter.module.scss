@@ -7,11 +7,17 @@
   margin: 40px 0;
   @include flex-column;
 
+  
+
   h1 {
     color: $secondary;
   }
   p {
     color: $secondary;
+
+    @include tablet{
+      text-align: center;
+    }
   }
   &__Form {
     @include flex;
@@ -40,6 +46,10 @@
 
     input {
       height: 40px;
+
+      @include tablet{
+        width: 65%;
+      }
     }
   }
 }
