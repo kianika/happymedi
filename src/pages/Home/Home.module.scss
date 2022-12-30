@@ -2,6 +2,10 @@
 
 .Container {
   margin: 10px 100px;
+  
+  @include tablet{
+    margin: 0 15px;
+  }
   h5 {
     margin: 40px 0 40px 0;
     font-size: 1.2rem;
