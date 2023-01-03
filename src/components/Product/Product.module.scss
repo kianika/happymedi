@@ -13,14 +13,17 @@
 
   @include tablet{
     min-width: 250px;
+    height: 360px;
   }
 
   @include laptop{
     min-width: 260px;
+    height: 360px;
   }
 
   h3 {
     color: $secondary;
+    text-align: center;
   }
 
   &__Number {

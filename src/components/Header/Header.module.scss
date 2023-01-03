@@ -30,7 +30,7 @@
 
     @include tablet {
       justify-content: space-between;
-      padding: 50px 0px;
+      padding: 20px 0px;
     }
 
     &__left {
@@ -43,11 +43,14 @@
       @include laptop{
         flex: 2;
       }
-
+      @include Desktop{
+        flex: 2;
+      }
       h2 {
         cursor: pointer;
         margin: 0px;
         color: #184363;
+        font-size: 22;
 
         @include tablet {
           font-size: 20px;
@@ -66,6 +69,7 @@
       @include laptop{
         flex:3;
       }
+
 
       &__searchContainer {
         display: flex;
@@ -132,6 +136,10 @@
     color: rgb(156, 153, 153);
     height: 1px;
     background-color: rgb(224, 218, 218);
+    
+    @include tablet{
+      display: none;
+    }
   }
 
   &__Navbar {
